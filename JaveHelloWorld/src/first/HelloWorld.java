@@ -1,6 +1,7 @@
 package first;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HelloWorld {
 
@@ -11,6 +12,7 @@ public class HelloWorld {
 	}*/
 
 //Temperature conversion
+	/*
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner (System.in)) {
 			System.out.println("Please enter the temperature: ");
@@ -33,7 +35,40 @@ public class HelloWorld {
 		}
 		
 
+	}*/
+	
+	//use methods, arrays, lists
+	/*
+	public static List<String> convertArrayToString(String[] stringArray)
+	{
+		List<String> stringList = new ArrayList<String>();
+		for(int i=0; i<stringArray.length; i++)
+		{
+			stringList.add(stringArray[i]);
+		}
+		return stringList;
 	}
-
-
+	
+	public static void main(String[] args) {
+		String[] stringArray = new String[4];
+		stringArray[0] = "Erum";
+		stringArray[1] = "Suleiman";
+		stringArray[2] = "Samar";
+		stringArray[3] = "Temur";
+		
+		List<String> stringList = new ArrayList<String>();
+		stringList = convertArrayToString(stringArray);
+		
+		//display both array and list items
+		for(int i=0; i<stringArray.length; i++)
+		{
+			System.out.println(stringArray[i]);
+		}
+		for(int i=0; i<stringList.size(); i++)
+		{
+			System.out.println(stringList.get(i));
+		}
+	}*/
+	
+	//reverse a list, use a stack
 }
