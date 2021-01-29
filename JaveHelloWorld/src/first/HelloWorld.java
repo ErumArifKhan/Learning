@@ -2,6 +2,7 @@ package first;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class HelloWorld {
 
@@ -71,4 +72,43 @@ public class HelloWorld {
 	}*/
 	
 	//reverse a list, use a stack
+	public static List<String> reverse(List<String> oldString)
+	{
+		List<String> newString = new ArrayList<String>();
+		Stack<String> temporaryStack = new Stack<String>();
+		
+		//store strings in stack
+		for(int i=0; i<oldString.size(); i++)
+		{
+			temporaryStack.push(oldString.get(i));
+		}
+		
+		//put stack items in a new list
+		while(temporaryStack.size() > 0)
+		{
+			newString.add(temporaryStack.pop());
+		}
+		
+		return newString;
+	}
+	
+	public static void main(String[] args)
+	{
+		//create original string
+		List<String> originalString = new ArrayList<String>();
+		originalString.add("First");
+		originalString.add("Second");
+		originalString.add("Third");
+		originalString.add("Fourth");
+		
+		//call method
+		List<String> newString = new ArrayList<String>();
+		newString = reverse(originalString);
+		
+		//display new string
+		for(int i=0; i<newString.size(); i++)
+		{
+			System.out.println(newString.get(i));
+		}
+	}
 }
